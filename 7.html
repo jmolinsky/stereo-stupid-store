@@ -171,6 +171,7 @@ aside li {
 @media (max-width: 750px) {
   #wrapper { margin: 0; }
   .layout { display: block; }
+  .tom-comment { margin-left: 0; margin-right: 0; }
   header h1 { font-size: 38px; }
   main { padding: 20px; }
   aside { margin-top: 15px; }
@@ -184,6 +185,33 @@ aside li {
   margin: 0 10px 8px 0;
   border: 1px solid #ddd;
 }
+
+
+/* Keep the story's comment header visible after the initial jump. */
+#story-start { scroll-margin-top: 48px; }
+
+/* A deliberately old-fashioned, decorative Blogger-style follower mosaic. */
+.followers-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 5px;
+  margin: 10px 0 14px;
+}
+.follower-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  min-width: 0;
+  border: 1px solid rgba(70, 60, 50, .25);
+  background: var(--avatar-bg);
+  color: var(--avatar-fg);
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.18);
+}
+.followers-note { color: #777; font-size: 10px; line-height: 1.4; }
 
 </style>
 </head>
@@ -270,7 +298,7 @@ Labels: <a href="https://bobbyderailed.blogspot.com/search/label/Halloween">Hall
 <div class="comment-date">11:34 AM, November 09, 2006</div>
 </div>
 
-<div class="comment tom-comment">
+<div class="comment tom-comment" id="story-start" tabindex="-1">
 <div class="comment-author">TomP said...</div>
 
 <p>I recognize this song. It fills the lobby and I feel my heart settle. Maybe they’re warming up. They’re probably just checking the levels or whatever. God it sounds good on these speakers though. A little loud maybe, but this is us. This is that tune we’ve been playing for months. It just came to us note by note. We built it one piece at a time until there was nothing more to add.</p>
@@ -328,8 +356,6 @@ Labels: <a href="https://bobbyderailed.blogspot.com/search/label/Halloween">Hall
 
 <h4>Blog Archive</h4>
 <ul>
-<li>2026</li>
-<li>2025</li>
 <li>2010</li>
 <li>2009</li>
 <li>2008</li>
@@ -344,6 +370,56 @@ Labels: <a href="https://bobbyderailed.blogspot.com/search/label/Halloween">Hall
 
 <h4>Followers</h4>
 <p>Friends of DERAILED</p>
+<div class="followers-grid" aria-label="Decorative reconstruction of an old Blogger follower grid" role="img">
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#809b90;--avatar-fg:#fff">✿</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#9caca9;--avatar-fg:#fff">L</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a6a0b8;--avatar-fg:#fff">W</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#8796a1;--avatar-fg:#fff">H</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#7995ae;--avatar-fg:#fff">✳</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a3a38a;--avatar-fg:#fff">D</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a2a982;--avatar-fg:#fff">O</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#c89a83;--avatar-fg:#fff">Z</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#bba188;--avatar-fg:#fff">✦</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#c5b87d;--avatar-fg:#fff">V</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#b8a0aa;--avatar-fg:#fff">G</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#b18c9c;--avatar-fg:#fff">R</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#809b90;--avatar-fg:#fff">★</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#9caca9;--avatar-fg:#fff">N</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a6a0b8;--avatar-fg:#fff">Y</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#8796a1;--avatar-fg:#fff">J</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#7995ae;--avatar-fg:#fff">✶</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a3a38a;--avatar-fg:#fff">F</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a2a982;--avatar-fg:#fff">Q</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#c89a83;--avatar-fg:#fff">B</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#bba188;--avatar-fg:#fff">☁</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#c5b87d;--avatar-fg:#fff">X</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#b8a0aa;--avatar-fg:#fff">I</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#b18c9c;--avatar-fg:#fff">T</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#809b90;--avatar-fg:#fff">♣</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#9caca9;--avatar-fg:#fff">P</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a6a0b8;--avatar-fg:#fff">A</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#8796a1;--avatar-fg:#fff">L</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#7995ae;--avatar-fg:#fff">✿</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a3a38a;--avatar-fg:#fff">H</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a2a982;--avatar-fg:#fff">S</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#c89a83;--avatar-fg:#fff">D</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#bba188;--avatar-fg:#fff">✳</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#c5b87d;--avatar-fg:#fff">Z</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#b8a0aa;--avatar-fg:#fff">K</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#b18c9c;--avatar-fg:#fff">V</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#809b90;--avatar-fg:#fff">✦</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#9caca9;--avatar-fg:#fff">R</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a6a0b8;--avatar-fg:#fff">C</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#8796a1;--avatar-fg:#fff">N</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#7995ae;--avatar-fg:#fff">★</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a3a38a;--avatar-fg:#fff">J</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#a2a982;--avatar-fg:#fff">U</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#c89a83;--avatar-fg:#fff">F</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#bba188;--avatar-fg:#fff">✶</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#c5b87d;--avatar-fg:#fff">B</span>
+<span class="follower-avatar" aria-hidden="true" style="--avatar-bg:#b8a0aa;--avatar-fg:#fff">M</span>
+</div>
+<p class="followers-note">Illustrative avatars, not actual follower profiles.</p>
 
 <h4>Links</h4>
 <p><a href="https://bobbyderailed.blogspot.com/?m=0">DERAILED Home</a></p>
@@ -356,6 +432,23 @@ Creative reconstruction for the Stereo Stupid Store fiction project.
 Original blog and writing by Bobby.
 <a href="https://bobbyderailed.blogspot.com/2006/10/blog-post_29.html?m=0">Visit the original Masquerade post.</a>
 </div>
+
+
+<script>
+(function () {
+  // Preserve explicit fragment links (including #story-start) and back/forward restoration.
+  function landOnStory() {
+    if (window.location.hash && window.location.hash !== '#story-start') return;
+    var target = document.getElementById('story-start');
+    if (!target) return;
+    // A second frame accounts for the mobile layout after images settle.
+    requestAnimationFrame(function () {
+      target.scrollIntoView({ block: 'start', behavior: 'instant' });
+    });
+  }
+  window.addEventListener('load', landOnStory);
+})();
+</script>
 
 </body>
 </html>
