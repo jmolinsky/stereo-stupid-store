@@ -14,7 +14,17 @@
     .top-inner { max-width: 1020px; margin: auto; display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
     .logo { font-family: Georgia, 'Times New Roman', serif; font-size: 31px; font-weight: bold; letter-spacing: -2px; color: #551a8b; text-decoration: none; }
     .crumbs { font-size: 13px; }
-    main { max-width: 1020px; margin: 0 auto; padding: 18px 20px 50px; }
+    .site-layout { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 175px minmax(0, 1fr); gap: 22px; align-items: start; padding: 15px 18px 45px; }
+    .sidebar { background: #f1f1f1; border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center; padding: 9px 9px 22px; min-height: 690px; font-size: 13px; }
+    .sidebar .side-logo { display: block; font: bold 29px Georgia, serif; letter-spacing: -2px; color: #551a8b; text-decoration: none; margin: 5px 0 12px; }
+    .sidebar .side-post { display: block; background: #fff; border: 1px solid #d3d3d3; padding: 5px 3px; font-weight: bold; margin: 8px 0; }
+    .sidebar .side-links { margin: 12px 0 16px; line-height: 1.85; }
+    .sidebar .side-search { border: 1px solid #ccc; background: #fff; width: 100%; padding: 5px; font: 12px Arial, sans-serif; }
+    .sidebar .side-heading { background: #ddd; font-weight: bold; padding: 5px 3px; margin: 15px -5px 7px; }
+    .sidebar .side-list { display: flex; flex-direction: column; gap: 7px; padding: 0 0 7px; }
+    .sidebar .side-bottom { margin-top: 22px; font-size: 11px; line-height: 1.9; }
+    .sidebar a { color: #00e; }
+    main { min-width: 0; padding: 5px 0 40px; }
     .utility { display: flex; justify-content: space-between; gap: 12px; color: #666; font-size: 12px; margin-bottom: 22px; }
     h1 { font-size: 23px; font-weight: normal; margin: 0 0 18px; line-height: 1.25; }
     .price { font-weight: bold; }
@@ -32,6 +42,7 @@
     .post-info { color: #777; font-size: 12px; margin-top: 34px; padding-top: 12px; border-top: 1px solid #ddd; max-width: 760px; }
     .story-links { max-width: 760px; margin-top: 35px; padding-top: 16px; border-top: 1px solid #ddd; display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; }
     footer { max-width: 1020px; margin: 0 auto; padding: 12px 20px 25px; color: #999; font-size: 11px; border-top: 1px solid #eee; }
+    @media (max-width: 680px) { .site-layout { display: block; padding: 0 12px 28px; } .sidebar { min-height: 0; padding: 8px 10px; margin: 0 -12px 15px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; } .sidebar .side-logo { font-size: 25px; margin: 0; } .sidebar .side-post { margin: 0; padding: 4px 8px; } .sidebar .side-links { margin: 0; } .sidebar .side-search, .sidebar .side-heading, .sidebar .side-list, .sidebar .side-bottom { display: none; } }
     @media (max-width: 600px) { .top { padding: 10px 15px; } main { padding: 15px; } h1 { font-size: 20px; } .photo-grid { gap: 5px; } .description { font-size: 14px; } }
   </style>
 </head>
@@ -42,7 +53,19 @@
       <div class="crumbs"><a href="1.html">portland</a> &gt; <a href="1.html">for sale</a> &gt; <a href="1.html">cars &amp; trucks - by owner</a></div>
     </div>
   </header>
-  <main>
+  <div class="site-layout">
+    <aside class="sidebar" aria-label="Daveslist sidebar">
+      <a class="side-logo" href="1.html">daveslist</a>
+      <a class="side-post" href="#posting">post to classifieds</a>
+      <div class="side-links"><a href="#posting">my account</a><br><a href="#posting">help, faq, abuse</a></div>
+      <input class="side-search" type="search" placeholder="search daveslist" aria-label="Search daveslist">
+      <div class="side-heading">portland</div>
+      <div class="side-list"><a href="#posting">community</a><a href="#posting">housing</a><a href="#posting">jobs</a><a href="#posting">personals</a><a href="#posting">for sale</a><a href="#posting">services</a><a href="#posting">discussion forums</a><a href="#posting">gigs</a><a href="#posting">resumes</a></div>
+      <div class="side-heading">nearby cl</div>
+      <div class="side-list"><a href="#posting">bellingham</a><a href="#posting">eugene</a><a href="#posting">seattle</a><a href="#posting">salem</a><a href="#posting">vancouver</a></div>
+      <div class="side-bottom"><a href="#posting">about daveslist</a><br><a href="#posting">privacy</a><br><a href="#posting">terms of use</a></div>
+    </aside>
+  <main id="posting">
     <div class="utility"><span>◀ prev &nbsp; ▲ index &nbsp; next ▶</span><span>posted: 2009-10-23</span></div>
     <h1>1986 Toyota Corrola - ignition issue <span class="price">- $500</span> <span class="place">(portland)</span></h1>
     <!-- Add two photos named toyota-1.jpg and toyota-2.jpg to the same GitHub folder as 4.html. -->
@@ -50,7 +73,7 @@
       <figure class="photo"><img src="toyota-1.jpg" alt="Old Toyota station wagon, exterior" onerror="this.parentElement.classList.add('missing')"><div class="fallback">vehicle photo 1<br>(add toyota-1.jpg)</div></figure>
       <figure class="photo"><img src="toyota-2.jpg" alt="Old Toyota station wagon, second view" onerror="this.parentElement.classList.add('missing')"><div class="fallback">vehicle photo 2<br>(add toyota-2.jpg)</div></figure>
     </div>
-    <div class="attributes"><span>1973 Toyota</span><span>condition: fair</span><span>fuel: gas</span><span>transmission: manual</span><span>type: wagon</span></div>
+    <div class="attributes"><span>1986 Toyota</span><span>condition: fair</span><span>fuel: gas</span><span>transmission: manual</span><span>type: wagon</span></div>
     <section class="description" aria-label="Posting description">
       <p>Friday night comes and I’m standing there gawking into the closet wondering what the hell to wear for this thing. It seems weird to wear the same clothes I wear to practice and it seems weird not to. I decide on a slightly nicer plaid shirt, one I typically reserve for birthday parties and the offhand date night. There’s only one clean pair of jeans, so that’s a no-brainer. I grab my mask and my guitar case and head for the door. The hall mirror stops me and I can’t help but set the guitar down for a second and become Tom. I slip the mask over my face, adjust the elastic, and Tom smiles back at me, reassuring. I take the guitar from the case, and the Tom before me strums a chord, up and down, gently, gently. I think we can do this.</p>
       <p>Down the stairs. Out the side door. Kinda embarrassed that I’m practically skipping across the asphalt and kinda don’t care. I toss the guitar case in the back seat and turn the key.</p>
@@ -59,6 +82,7 @@
     <div class="post-info">post id: 19731023 &nbsp; | &nbsp; posted: 2009-10-23</div>
     <nav class="story-links" aria-label="Story navigation"><a href="5.html">next &gt;&gt;</a><a href="1.html">&lt;&lt; beginning</a></nav>
   </main>
+  </div>
   <footer>daveslist is a fictional classified-ad page created for an experimental fiction project.</footer>
 </body>
 </html>
