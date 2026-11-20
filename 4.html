@@ -14,36 +14,36 @@
     .top-inner { max-width: 1020px; margin: auto; display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
     .logo { font-family: Georgia, 'Times New Roman', serif; font-size: 31px; font-weight: bold; letter-spacing: -2px; color: #551a8b; text-decoration: none; }
     .crumbs { font-size: 13px; }
-    .site-layout { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 175px minmax(0, 1fr); gap: 22px; align-items: start; padding: 15px 18px 45px; }
-    .sidebar { background: #f1f1f1; border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center; padding: 9px 9px 22px; min-height: 690px; font-size: 13px; }
-    .sidebar .side-logo { display: block; font: bold 29px Georgia, serif; letter-spacing: -2px; color: #551a8b; text-decoration: none; margin: 5px 0 12px; }
-    .sidebar .side-post { display: block; background: #fff; border: 1px solid #d3d3d3; padding: 5px 3px; font-weight: bold; margin: 8px 0; }
-    .sidebar .side-links { margin: 12px 0 16px; line-height: 1.85; }
-    .sidebar .side-search { border: 1px solid #ccc; background: #fff; width: 100%; padding: 5px; font: 12px Arial, sans-serif; }
-    .sidebar .side-heading { background: #ddd; font-weight: bold; padding: 5px 3px; margin: 15px -5px 7px; }
-    .sidebar .side-list { display: flex; flex-direction: column; gap: 7px; padding: 0 0 7px; }
-    .sidebar .side-bottom { margin-top: 22px; font-size: 11px; line-height: 1.9; }
-    .sidebar a { color: #00e; }
-    main { min-width: 0; padding: 5px 0 40px; }
-    .utility { display: flex; justify-content: space-between; gap: 12px; color: #666; font-size: 12px; margin-bottom: 22px; }
-    h1 { font-size: 23px; font-weight: normal; margin: 0 0 18px; line-height: 1.25; }
+    .site-layout { max-width: 1020px; margin: 0 auto; padding: 20px 18px 45px; }
+    main { min-width: 0; }
+    .utility { display: flex; justify-content: space-between; gap: 12px; color: #666; font-size: 12px; margin-bottom: 18px; }
+    h1 { font: bold 23px Georgia, 'Times New Roman', serif; margin: 0 0 12px; line-height: 1.25; }
     .price { font-weight: bold; }
-    .place { font-size: 17px; color: #555; }
-    .photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: 760px; }
-    .photo { margin: 0; border: 1px solid #ccc; background: #eee; aspect-ratio: 4 / 3; overflow: hidden; position: relative; }
-    .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo .fallback { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; text-align: center; padding: 15px; color: #777; font-size: 13px; }
-    .photo.missing .fallback { display: flex; }
-    .photo.missing img { display: none; }
-    .attributes { display: flex; flex-wrap: wrap; gap: 7px; margin: 17px 0 28px; max-width: 760px; }
-    .attributes span { background: #eee; padding: 6px 9px; font-size: 13px; }
+    .place { font-size: 18px; }
+    .listing-layout { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(250px, 1fr); gap: 34px; align-items: start; }
+    .photo-main { margin: 0; background: #eee; aspect-ratio: 4 / 3; overflow: hidden; position: relative; }
+    .photo-main img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .photo-main .fallback, .thumb .fallback { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; padding: 12px; text-align: center; color: #777; }
+    .photo-main.missing .fallback, .thumb.missing .fallback { display: flex; }
+    .photo-main.missing img, .thumb.missing img { display: none; }
+    .thumbs { display: flex; gap: 5px; margin: 13px 0 12px; }
+    .thumb { position: relative; width: 67px; height: 52px; border: 2px solid #ccc; padding: 0; background: #eee; cursor: pointer; }
+    .thumb.selected { border-color: #e9a51c; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .listing-details { font: 16px/1.45 Georgia, 'Times New Roman', serif; }
+    .listing-details p { margin: 0 0 5px; }
+    .listing-details strong { font-weight: bold; }
+    .listing-details .value { color: #00e; }
+    .vehicle-name { margin: 14px 0 12px !important; font-weight: bold; }
+    .map { height: 275px; width: 100%; border: 1px solid #ddd; overflow: hidden; background: #f4edf2; }
+    .map svg { display: block; width: 100%; height: 100%; }
     .description { max-width: 760px; font-size: 15px; line-height: 1.65; white-space: pre-line; }
     .description p { margin: 0 0 1.15em; }
     .post-info { color: #777; font-size: 12px; margin-top: 34px; padding-top: 12px; border-top: 1px solid #ddd; max-width: 760px; }
     .story-links { max-width: 760px; margin-top: 35px; padding-top: 16px; border-top: 1px solid #ddd; display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; }
     footer { max-width: 1020px; margin: 0 auto; padding: 12px 20px 25px; color: #999; font-size: 11px; border-top: 1px solid #eee; }
-    @media (max-width: 680px) { .site-layout { display: block; padding: 0 12px 28px; } .sidebar { min-height: 0; padding: 8px 10px; margin: 0 -12px 15px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; } .sidebar .side-logo { font-size: 25px; margin: 0; } .sidebar .side-post { margin: 0; padding: 4px 8px; } .sidebar .side-links { margin: 0; } .sidebar .side-search, .sidebar .side-heading, .sidebar .side-list, .sidebar .side-bottom { display: none; } }
-    @media (max-width: 600px) { .top { padding: 10px 15px; } main { padding: 15px; } h1 { font-size: 20px; } .photo-grid { gap: 5px; } .description { font-size: 14px; } }
+    @media (max-width: 700px) { .listing-layout { grid-template-columns: 1fr; gap: 16px; } .listing-details { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; } .map { height: 220px; } .vehicle-name { margin-top: 0 !important; } }
+    @media (max-width: 480px) { .site-layout { padding: 15px 12px 30px; } .top { padding: 10px 12px; } h1 { font-size: 20px; } .listing-details { display: block; } .map { height: 190px; } .description { font-size: 14px; } }
   </style>
 </head>
 <body>
@@ -54,26 +54,53 @@
     </div>
   </header>
   <div class="site-layout">
-    <aside class="sidebar" aria-label="Daveslist sidebar">
-      <a class="side-logo" href="1.html">daveslist</a>
-      <a class="side-post" href="#posting">post to classifieds</a>
-      <div class="side-links"><a href="#posting">my account</a><br><a href="#posting">help, faq, abuse</a></div>
-      <input class="side-search" type="search" placeholder="search daveslist" aria-label="Search daveslist">
-      <div class="side-heading">portland</div>
-      <div class="side-list"><a href="#posting">community</a><a href="#posting">housing</a><a href="#posting">jobs</a><a href="#posting">personals</a><a href="#posting">for sale</a><a href="#posting">services</a><a href="#posting">discussion forums</a><a href="#posting">gigs</a><a href="#posting">resumes</a></div>
-      <div class="side-heading">nearby cl</div>
-      <div class="side-list"><a href="#posting">bellingham</a><a href="#posting">eugene</a><a href="#posting">seattle</a><a href="#posting">salem</a><a href="#posting">vancouver</a></div>
-      <div class="side-bottom"><a href="#posting">about daveslist</a><br><a href="#posting">privacy</a><br><a href="#posting">terms of use</a></div>
-    </aside>
   <main id="posting">
     <div class="utility"><span>◀ prev &nbsp; ▲ index &nbsp; next ▶</span><span>posted: 2009-10-23</span></div>
     <h1>1986 Toyota Corrola - ignition issue <span class="price">- $500</span> <span class="place">(portland)</span></h1>
-    <!-- Add two photos named toyota-1.jpg and toyota-2.jpg to the same GitHub folder as 4.html. -->
-    <div class="photo-grid" aria-label="Vehicle photos">
-      <figure class="photo"><img src="toyota-1.jpg" alt="Old Toyota station wagon, exterior" onerror="this.parentElement.classList.add('missing')"><div class="fallback">vehicle photo 1<br>(add toyota-1.jpg)</div></figure>
-      <figure class="photo"><img src="toyota-2.jpg" alt="Old Toyota station wagon, second view" onerror="this.parentElement.classList.add('missing')"><div class="fallback">vehicle photo 2<br>(add toyota-2.jpg)</div></figure>
+    <div class="listing-layout">
+      <div class="listing-primary">
+        <figure class="photo-main" id="main-photo"><img id="featured-photo" src="toyota-1.jpg" alt="1986 Toyota, exterior" onerror="this.parentElement.classList.add('missing')"><div class="fallback">vehicle photo<br>(add toyota-1.jpg)</div></figure>
+        <div class="thumbs" aria-label="Car photos">
+          <button class="thumb selected" type="button" onclick="showPhoto(1,this)" aria-label="View first vehicle photo"><img src="toyota-1.jpg" alt="Exterior thumbnail" onerror="this.parentElement.classList.add('missing')"><span class="fallback">1</span></button>
+          <button class="thumb" type="button" onclick="showPhoto(2,this)" aria-label="View second vehicle photo"><img src="toyota-2.jpg" alt="Interior thumbnail" onerror="this.parentElement.classList.add('missing')"><span class="fallback">2</span></button>
+        </div>
+      </div>
+      <aside class="listing-details" aria-label="Map and vehicle information">
+        <div class="map" role="img" aria-label="Illustrative street map of Portland, Oregon">
+          <svg viewBox="0 0 320 275" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="320" height="275" fill="#f3ecf2"/>
+            <path d="M253 -10 C235 45 245 75 219 110 S192 183 224 215 S252 250 242 290" fill="none" stroke="#bad8e7" stroke-width="28"/>
+            <path d="M253 -10 C235 45 245 75 219 110 S192 183 224 215 S252 250 242 290" fill="none" stroke="#d7edf5" stroke-width="21"/>
+            <g stroke="#fff" stroke-width="5" fill="none">
+              <path d="M0 25H320 M0 62H320 M0 100H320 M0 140H320 M0 179H320 M0 220H320 M0 257H320"/>
+              <path d="M28 0V275 M68 0V275 M111 0V275 M151 0V275 M190 0V275 M270 0V275 M306 0V275"/>
+            </g>
+            <g stroke="#d9d3d9" stroke-width="1" fill="none">
+              <path d="M0 25H320 M0 62H320 M0 100H320 M0 140H320 M0 179H320 M0 220H320 M0 257H320"/>
+              <path d="M28 0V275 M68 0V275 M111 0V275 M151 0V275 M190 0V275 M270 0V275 M306 0V275"/>
+            </g>
+            <path d="M0 204L320 116" stroke="#e7d89b" stroke-width="11" opacity=".85"/>
+            <path d="M0 204L320 116" stroke="#fff" stroke-width="6"/>
+            <g font-family="Arial,sans-serif" font-size="10" fill="#85828b"><text x="23" y="54">NW Portland</text><text x="91" y="165">Downtown</text><text x="266" y="88">NE</text><text x="264" y="244">SE</text></g>
+            <circle cx="116" cy="150" r="38" fill="#7953a5" fill-opacity=".14" stroke="#7953a5" stroke-width="1.5"/>
+            <g><rect x="8" y="9" width="25" height="72" rx="2" fill="white" stroke="#bbb"/><text x="15" y="32" font-family="Arial" font-size="20">+</text><path d="M8 45H33" stroke="#bbb"/><text x="17" y="69" font-family="Arial" font-size="20">−</text></g>
+            <text x="313" y="269" text-anchor="end" font-family="Arial" font-size="8" fill="#666">illustrative map</text>
+          </svg>
+        </div>
+        <div class="vehicle-specs">
+          <p class="vehicle-name">1986 <span class="value">Toyota Corrola</span></p>
+          <p><strong>condition:</strong> <span class="value">fair</span></p>
+          <p><strong>cylinders:</strong> <span class="value">4 cylinders</span></p>
+          <p><strong>drive:</strong> <span class="value">fwd</span></p>
+          <p><strong>fuel:</strong> <span class="value">gas</span></p>
+          <p><strong>odometer:</strong> 259,750</p>
+          <p><strong>paint color:</strong> <span class="value">blue</span></p>
+          <p><strong>title status:</strong> <span class="value">clean</span></p>
+          <p><strong>transmission:</strong> <span class="value">manual</span></p>
+          <p><strong>type:</strong> <span class="value">sedan</span></p>
+        </div>
+      </aside>
     </div>
-    <div class="attributes"><span>1986 Toyota</span><span>condition: fair</span><span>fuel: gas</span><span>transmission: manual</span><span>type: wagon</span></div>
     <section class="description" aria-label="Posting description">
       <p>Friday night comes and I’m standing there gawking into the closet wondering what the hell to wear for this thing. It seems weird to wear the same clothes I wear to practice and it seems weird not to. I decide on a slightly nicer plaid shirt, one I typically reserve for birthday parties and the offhand date night. There’s only one clean pair of jeans, so that’s a no-brainer. I grab my mask and my guitar case and head for the door. The hall mirror stops me and I can’t help but set the guitar down for a second and become Tom. I slip the mask over my face, adjust the elastic, and Tom smiles back at me, reassuring. I take the guitar from the case, and the Tom before me strums a chord, up and down, gently, gently. I think we can do this.</p>
       <p>Down the stairs. Out the side door. Kinda embarrassed that I’m practically skipping across the asphalt and kinda don’t care. I toss the guitar case in the back seat and turn the key.</p>
@@ -84,5 +111,17 @@
   </main>
   </div>
   <footer>daveslist is a fictional classified-ad page created for an experimental fiction project.</footer>
+<script>
+    function showPhoto(n, button) {
+      const featured = document.getElementById('featured-photo');
+      const frame = document.getElementById('main-photo');
+      frame.classList.remove('missing');
+      featured.src = 'toyota-' + n + '.jpg';
+      featured.alt = '1986 Toyota, photo ' + n;
+      frame.querySelector('.fallback').textContent = 'vehicle photo ' + n + ' (add toyota-' + n + '.jpg)';
+      document.querySelectorAll('.thumb').forEach(el => el.classList.remove('selected'));
+      button.classList.add('selected');
+    }
+  </script>
 </body>
 </html>
